@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guessing Game</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 30px;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff7b00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff5500;
+    }
+
+    /* ⭐ Star shape */
+    .star {
+      width: 220px;
+      height: 220px;
+      background: gold;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 
+        68% 57%, 79% 91%, 
+        50% 70%, 21% 91%, 
+        32% 57%, 2% 35%, 
+        39% 35%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 20px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .star-text {
+      font-size: 16px;
+      color: #222;
+    }
+
+    .result {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .stars {
+      font-size: 28px;
+      color: gold;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ⭐ Welcome Star -->
+<div class="star">
+  <div class="star-text">
+    WELCOME TO NUMBER GUESSING GAME
+  </div>
+</div>
+
+<h1>Guess the Number (1–100)</h1>
+
+<form method="POST">
+  <input type="number" name="guess" placeholder="Enter number (1-100)" required>
+  <br>
+  <button type="submit">Guess</button>
+</form>
+
+<!-- 🎯 Result -->
+<div class="result">
+  {{ message }}
+</div>
+
+<!-- ⭐ Rating -->
+<div class="stars">
+  {{ stars }}
+</div>
+
+<p class="footer">
+  thanks ~ SHREYA &lt;3
+</p>
+
+</body>
+</html>
